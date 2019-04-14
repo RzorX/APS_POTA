@@ -12,23 +12,29 @@ public class MergeSort {
     }
 
     public static void Intercala(int[] A, int p, int q, int r) {
+        int cont = 0;
         int B[] = new int[A.length];
-        for (int i = p; i < q; i++) {
-            B[i] = A[i];
+        for (int k = p; k <= r; k++) {
+            B[k] = A[k];
+            cont++;
         }
-        for (int j = q + 1; j < r; j++) {
-            B[r + q + 1 - j] = A[j];
-        }
-        int i = p;
-        int j = r;
-        for (int k = p; k < r; k++) {
-            if(B[i] <= B[j]){
-                A[k] = B[i];
-                i = i + 1;
-            } else {
-                A[k] = B[j];
-                j = j - 1;
+            int i = p;
+            int j = q+1;
+            for (int k = p; k <= r; k++) {
+                if (i > q) {
+                    A[k] = B[j++];
+                    cont++;
+                } else if (j > r){
+                    A[k] = B[i++];
+                    cont++;
+                } else if (B[i] < B[j]){
+                    A[k] = B[i++];
+                    cont++;
+                } else {
+                    A[k] = B[j++];
+                    cont++;
+                }
             }
+            System.out.println("Comparações MergeSort: " +cont);
         }
     }
-}

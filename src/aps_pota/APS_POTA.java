@@ -18,15 +18,10 @@ public class APS_POTA {
         for (int i = 0; i < vetor1.length; i++) {
             int random = (int) (Math.random() * 101);
             vetor1[i] = random;
-            System.out.print(vetor1[i] + ", ");
         }
 
+        SelectionSort(vetor1);
         MergeSort(vetor1, 0, vetor1.length - 1);
-        System.out.println();
-        for (int j = 0; j < vetor1.length; j++) {
-            System.out.print(vetor1[j]+ ", ");
-        }
-        System.out.println();
 
         int vetor2[] = new int[tam10];
         for (int i = 0; i < vetor2.length; i++) {
