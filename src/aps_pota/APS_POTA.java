@@ -1,6 +1,7 @@
 package aps_pota;
 
 import static aps_pota.MergeSort.MergeSort;
+import static aps_pota.SelectionSort.SelectionSort;
 
 public class APS_POTA {
 
