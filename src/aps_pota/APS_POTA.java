@@ -20,16 +20,14 @@ public class APS_POTA {
             vetor1[i] = random;
             System.out.print(vetor1[i] + ", ");
         }
-        
+
         MergeSort(vetor1, 0, vetor1.length - 1);
-      
-        
-        System.out.println("Nova sequencia com Merge Sort: ");
-        for (int i = 0; i < vetor1.length; i++) {
-            System.out.print(vetor1[i] + ", ");
+        System.out.println();
+        for (int j = 0; j < vetor1.length; j++) {
+            System.out.print(vetor1[j]+ ", ");
         }
         System.out.println();
-        
+
         int vetor2[] = new int[tam10];
         for (int i = 0; i < vetor2.length; i++) {
             int random = (int) (Math.random() * 101);
@@ -58,7 +56,7 @@ public class APS_POTA {
             int random = (int) (Math.random() * 101);
             vetor6[i] = random;
         }
-         
+
     }
-    
+
 }

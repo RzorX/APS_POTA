@@ -1,36 +1,34 @@
 package aps_pota;
 
 public class MergeSort {
-    
-    public static void MergeSort(int v[], int inicio, int fim) {
-        if (inicio < fim) {
-            int meio = (inicio + fim) / 2;
-            MergeSort(v, inicio, meio);
-            MergeSort(v, meio + 1, fim);
-            Intercala(v, inicio, meio, fim);
+
+    public static void MergeSort(int[] A, int p, int r) {
+        if (p < r) {
+            int q = (p + r) / 2;
+            MergeSort(A, p, q);
+            MergeSort(A, q + 1, r);
+            Intercala(A, p, q, r);
         }
     }
 
-    public static void Intercala(int v[], int inicio, int meio, int fim) {
-        int b[] = new int[v.length];
-        for (int i = inicio; i < meio; i++) {
-            b[i] = v[i];
-            for (int j = meio + 1; j < fim; j++) {
-                b[fim + meio + 1 - j] = v[j];
-                inicio = i;
-                fim = j;
-                for (int k = inicio; k < fim; k++) {
-                    if (b[i] <= b[j]) {
-                        v[k] = b[i];
-                        inicio = inicio + 1;
-                    } else {
-                        v[k] = b[j];
-                        fim = fim - 1;
-                    }
-                }
+    public static void Intercala(int[] A, int p, int q, int r) {
+        int B[] = new int[A.length];
+        for (int i = p; i < q; i++) {
+            B[i] = A[i];
+        }
+        for (int j = q + 1; j < r; j++) {
+            B[r + q + 1 - j] = A[j];
+        }
+        int i = p;
+        int j = r;
+        for (int k = p; k < r; k++) {
+            if(B[i] <= B[j]){
+                A[k] = B[i];
+                i = i + 1;
+            } else {
+                A[k] = B[j];
+                j = j - 1;
             }
         }
     }
-
-    
 }
