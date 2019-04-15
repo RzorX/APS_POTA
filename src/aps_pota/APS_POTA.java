@@ -22,7 +22,6 @@ public class APS_POTA {
 
         SelectionSort(vetor1);
         MergeSort(vetor1, 0, vetor1.length - 1);
-
         int vetor2[] = new int[tam10];
         for (int i = 0; i < vetor2.length; i++) {
             int random = (int) (Math.random() * 101);
