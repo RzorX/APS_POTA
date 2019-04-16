@@ -29,7 +29,7 @@ public class APS_POTA {
             for (int i = 0; i < vetor1.length; i++) {
                 System.out.print(vetor1[i] + ", ");
             }
-       
+            System.out.println("\n");
 
         }
 
