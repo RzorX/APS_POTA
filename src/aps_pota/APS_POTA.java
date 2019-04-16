@@ -20,27 +20,33 @@ public class APS_POTA {
                 int random = (int) (Math.random() * 101);
                 vetor1[i] = random;
             }
-            for (int i = 0; i < vetor1.length; i++) {
-                System.out.print(vetor1[i] + ", ");
-            }
-            System.out.println();
             SelectionSort(vetor1);
-            System.out.println("Nova sequencia com Selection Sort: ");
-            for (int i = 0; i < vetor1.length; i++) {
-                System.out.print(vetor1[i] + ", ");
-            }
             System.out.println("\n");
+            System.out.println("Número médio de comparações (SELECTION SORT): " );
 
         }
 
         //MergeSort(vetor1, 0, vetor1.length - 1);
-        
-        int vetor2[] = new int[tam10];
-        for (int i = 0; i < vetor2.length; i++) {
-            int random = (int) (Math.random() * 101);
-            vetor2[i] = random;
-        }
+        for (int e = 0; e < 50; e++) {
 
+            int vetor2[] = new int[tam10];
+            for (int i = 0; i < vetor2.length; i++) {
+                int random = (int) (Math.random() * 101);
+                vetor2[i] = random;
+            }
+            System.out.println("SEQUENCIA ORIGINAL");
+            for (int i = 0; i < vetor2.length; i++) {
+
+                System.out.print(vetor2[i] + ", ");
+            }
+            System.out.println();
+            SelectionSort(vetor2);
+            System.out.println("Nova sequencia com Selection Sort: ");
+            for (int i = 0; i < vetor2.length; i++) {
+                System.out.print(vetor2[i] + ", ");
+            }
+            System.out.println("\n");
+        }
         int vetor3[] = new int[tam50];
         for (int i = 0; i < vetor3.length; i++) {
             int random = (int) (Math.random() * 101);
