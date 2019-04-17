@@ -1,8 +1,12 @@
 package aps_pota;
 
-public class MergeSort {
+public class MergeSort extends AlgOrd{
 
-    public static void MergeSort(int[] A, int p, int r) {
+    public MergeSort(String nome) {
+        super(nome);
+    }
+
+    private void MergeSort(int[] A, int p, int r) {
         if (p < r) {
             int q = (p + r) / 2;
             MergeSort(A, p, q);
@@ -11,7 +15,7 @@ public class MergeSort {
         }
     }
 
-    public static void Intercala(int[] A, int p, int q, int r) {
+    private void Intercala(int[] A, int p, int q, int r) {
         int cont = 0;
         int B[] = new int[A.length];
         for (int k = p; k <= r; k++) {
@@ -38,4 +42,11 @@ public class MergeSort {
             }
             System.out.println("Comparações MergeSort: " +cont);
         }
+
+    @Override
+    public void Orderna(int[] vet) {
+        this.MergeSort(vet, 0, 0);
+        this.tamanho = vet.length;
+    }
+    
     }

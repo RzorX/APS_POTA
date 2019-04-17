@@ -1,36 +1,45 @@
 package aps_pota;
 
-import static aps_pota.MergeSort.MergeSort;
 import static aps_pota.SelectionSort.SelectionSort;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class APS_POTA {
 
     public static void main(String[] args) {
 
-        int tam5 = 5;
-        int tam10 = 10;
-        int tam50 = 50;
-        int tam100 = 100;
-        int tam1000 = 1000;
-        int tam10000 = 10000;
-
-
-        int[] vetor1 = GenerateRandVet(tam5);
-        int[] vetor2 = GenerateRandVet(tam10);
-        int[] vetor3 = GenerateRandVet(tam50);
-        int[] vetor4 = GenerateRandVet(tam100);
-        int[] vetor5 = GenerateRandVet(tam1000);
-        int[] vetor6 = GenerateRandVet(tam10000);
-
-        SelectionSort(vetor1);
-        for (int i = 0; i < vetor1.length; i++) {
-            System.out.print(vetor1[i] + ", ");
+        ArrayList<int[]> vetores = new ArrayList();
+        
+        vetores.add(new int[5]);
+        vetores.add(new int[10]);
+        vetores.add(new int[50]);
+        //vetores.add(new int[100]);
+        //vetores.add(new int[1000]);
+        //vetores.add(new int[10000]);
+             
+        for(int i = 0; i<vetores.size(); i++){
+            
+            //Define o tamanho do vetor e gerar um valor aleatorio
+            int v[] = new int [vetores.get(i).length];
+            v = GenerateRandVet(v.length);
+            
+            //Criar instancias para comparação
+            //Meger Sort
+            MergeSort ms = new MergeSort("Merge Sort");
+            
+            for (int j = 0; j < 50; j++ ) {
+                //Executa cada script de comparação 50 vezes com o mesmo vetor
+                
+                //Meger Sort
+                ms.Orderna(v);
+                
+                //Selection Sort
+                //SelectionSort(v);
+                //Adicionar os demais...
+            }            
+            
+            System.out.println(ms.toString());
         }
-        System.out.println();
-        //MergeSort(vetor1, 0, vetor1.length - 1);
-        System.out.println("\n");
-        System.out.println("Número médio de comparações (SELECTION SORT): ");
-
     }
 
     public static int[] GenerateRandVet(int tamanho){
