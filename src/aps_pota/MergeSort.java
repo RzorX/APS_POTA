@@ -34,6 +34,7 @@ public class MergeSort {
                     A[k] = B[j++];
                     cont++;
                 }
+                cont++;
             }
             System.out.println("Comparações MergeSort: " +cont);
         }

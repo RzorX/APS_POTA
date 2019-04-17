@@ -1,7 +1,7 @@
 package aps_pota;
 
-public class SelectionSort {   
- 
+public class SelectionSort {
+
     public static int SelectionSort(int v[]) {
         int cont = 0;
         for (int i = 0; i < v.length - 1; i++) {
@@ -17,7 +17,8 @@ public class SelectionSort {
             v[i] = v[minimo];
             v[minimo] = aux;
         }
-        System.out.println("Comparações SelectionSort: " +cont);
-        return cont;
+            System.out.println("Comparações SelectionSort: " + cont);
+            return cont;
+        }
+
     }
-}

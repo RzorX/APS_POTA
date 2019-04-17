@@ -22,9 +22,8 @@ public class APS_POTA {
             }
             SelectionSort(vetor1);
             //MergeSort(vetor1, 0, vetor1.length - 1);
-
             System.out.println("\n");
-            System.out.println("Número médio de comparações (SELECTION SORT): " );
+            System.out.println("Número médio de comparações (SELECTION SORT): ");
 
         }
 
