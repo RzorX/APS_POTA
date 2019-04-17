@@ -14,58 +14,35 @@ public class APS_POTA {
         int tam1000 = 1000;
         int tam10000 = 10000;
 
-        for (int e = 0; e < 50; e++) {
-            int vetor1[] = new int[tam5];
-            for (int i = 0; i < vetor1.length; i++) {
-                int random = (int) (Math.random() * 101);
-                vetor1[i] = random;
-            }
-            SelectionSort(vetor1);
-            //MergeSort(vetor1, 0, vetor1.length - 1);
-            System.out.println("\n");
-            System.out.println("Número médio de comparações (SELECTION SORT): ");
 
-        }
+        int[] vetor1 = GenerateRandVet(tam5);
+        int[] vetor2 = GenerateRandVet(tam10);
+        int[] vetor3 = GenerateRandVet(tam50);
+        int[] vetor4 = GenerateRandVet(tam100);
+        int[] vetor5 = GenerateRandVet(tam1000);
+        int[] vetor5 = GenerateRandVet(tam10000);
 
-        for (int e = 0; e < 50; e++) {
-            int vetor2[] = new int[tam10];
-            for (int i = 0; i < vetor2.length; i++) {
-                int random = (int) (Math.random() * 101);
-                vetor2[i] = random;
-            }
-        }
+        SelectionSort(vetor1);
+        //MergeSort(vetor1, 0, vetor1.length - 1);
+        System.out.println("\n");
+        System.out.println("Número médio de comparações (SELECTION SORT): ");
 
-        for (int e = 0; e < 50; e++) {
-            int vetor3[] = new int[tam50];
-            for (int i = 0; i < vetor3.length; i++) {
+    }
+
+    public static int[] GenerateRandVet(int tamanho){
+       
+       int vetor[] = new int[tamanho];
+
+       for (int e = 0; e < tamanho; e++) {
+            
+            for (int i = 0; i < vetor.length; i++) {
                 int random = (int) (Math.random() * 101);
-                vetor3[i] = random;
+                vetor[i] = random;
             }
         }
 
-        for (int e = 0; e < 50; e++) {
-            int vetor4[] = new int[tam100];
-            for (int i = 0; i < vetor4.length; i++) {
-                int random = (int) (Math.random() * 101);
-                vetor4[i] = random;
-            }
-        }
-
-        for (int e = 0; e < 50; e++) {
-            int vetor5[] = new int[tam1000];
-            for (int i = 0; i < vetor5.length; i++) {
-                int random = (int) (Math.random() * 101);
-                vetor5[i] = random;
-            }
-        }
-
-        for (int e = 0; e < 50; e++) {
-            int vetor6[] = new int[tam10000];
-            for (int i = 0; i < vetor6.length; i++) {
-                int random = (int) (Math.random() * 101);
-                vetor6[i] = random;
-            }
-        }
+        return vetor; 
     }
 
 }
+
