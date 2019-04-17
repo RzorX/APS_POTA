@@ -20,9 +20,13 @@ public class APS_POTA {
         int[] vetor3 = GenerateRandVet(tam50);
         int[] vetor4 = GenerateRandVet(tam100);
         int[] vetor5 = GenerateRandVet(tam1000);
-        int[] vetor5 = GenerateRandVet(tam10000);
+        int[] vetor6 = GenerateRandVet(tam10000);
 
         SelectionSort(vetor1);
+        for (int i = 0; i < vetor1.length; i++) {
+            System.out.print(vetor1[i] + ", ");
+        }
+        System.out.println();
         //MergeSort(vetor1, 0, vetor1.length - 1);
         System.out.println("\n");
         System.out.println("Número médio de comparações (SELECTION SORT): ");
@@ -33,7 +37,7 @@ public class APS_POTA {
        
        int vetor[] = new int[tamanho];
 
-       for (int e = 0; e < tamanho; e++) {
+       for (int e = 0; e < 50; e++) {
             
             for (int i = 0; i < vetor.length; i++) {
                 int random = (int) (Math.random() * 101);
