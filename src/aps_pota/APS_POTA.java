@@ -1,6 +1,5 @@
 package aps_pota;
 
-import static aps_pota.SelectionSort.SelectionSort;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -35,11 +34,12 @@ public class APS_POTA {
                 ms.Orderna(v);
                 
                 //Selection Sort
-                ss.Ordena(v);
+                ss.Orderna(v);
                 //Adicionar os demais...
             }            
             
             System.out.println(ms.toString());
+            System.out.println(ss.toString());
         }
     }
 
