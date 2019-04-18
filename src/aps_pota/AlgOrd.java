@@ -10,7 +10,7 @@ package aps_pota;
  * @author isantos
  */
 public abstract class AlgOrd {
-    private int comparacoes;
+    protected int comparacoes;
     private String nome;
     int tamanho;
 

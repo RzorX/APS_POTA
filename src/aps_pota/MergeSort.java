@@ -40,12 +40,13 @@ public class MergeSort extends AlgOrd{
                 }
                 cont++;
             }
-            System.out.println("Comparações MergeSort: " +cont);
+            
+            this.comparacoes = cont;
         }
 
     @Override
     public void Orderna(int[] vet) {
-        this.MergeSort(vet, 0, 0);
+        this.MergeSort(vet, 0, vet.length-1);
         this.tamanho = vet.length;
     }
     
