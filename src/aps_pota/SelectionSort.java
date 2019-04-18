@@ -21,10 +21,9 @@ public class SelectionSort extends AlgOrd{
             v[i] = v[minimo];
             v[minimo] = aux;
         }
-            System.out.println("Comparações SelectionSort: " + cont);
-            return cont;
+            this.comparacoes = cont;
         }
-    
+
      @Override
     public void Orderna(int[] vet) {
         SelectionSort.SelectionSort(vet);

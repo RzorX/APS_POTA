@@ -26,6 +26,7 @@ public class APS_POTA {
             //Criar instancias para comparação
             //Meger Sort
             MergeSort ms = new MergeSort("Merge Sort");
+            SelectionSort ss = new SelectionSort("Selection Sort");
             
             for (int j = 0; j < 50; j++ ) {
                 //Executa cada script de comparação 50 vezes com o mesmo vetor
@@ -34,7 +35,7 @@ public class APS_POTA {
                 ms.Orderna(v);
                 
                 //Selection Sort
-                SelectionSort(v);
+                ss.Ordena(v);
                 //Adicionar os demais...
             }            
             
