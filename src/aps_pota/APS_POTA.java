@@ -34,7 +34,7 @@ public class APS_POTA {
                 ms.Orderna(v);
                 
                 //Selection Sort
-                //SelectionSort(v);
+                SelectionSort(v);
                 //Adicionar os demais...
             }            
             

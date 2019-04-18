@@ -1,6 +1,10 @@
 package aps_pota;
 
-public class SelectionSort {
+public class SelectionSort extends AlgOrd{
+    
+    public SelectionSort(String nome) {
+        super(nome);
+    }
 
     public static int SelectionSort(int v[]) {
         int cont = 0;
@@ -20,5 +24,12 @@ public class SelectionSort {
             System.out.println("Comparações SelectionSort: " + cont);
             return cont;
         }
+    
+     @Override
+    public void Orderna(int[] vet) {
+        SelectionSort.SelectionSort(vet);
+        this.tamanho = vet.length;
+    }
+    
 
     }
