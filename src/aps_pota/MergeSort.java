@@ -18,13 +18,16 @@ public class MergeSort extends AlgOrd{
     private void Intercala(int[] A, int p, int q, int r) {
         int cont = 0;
         int B[] = new int[A.length];
+        cont++;
         for (int k = p; k <= r; k++) {
             B[k] = A[k];
             cont++;
         }
             int i = p;
             int j = q+1;
+            cont++;
             for (int k = p; k <= r; k++) {
+                cont++;
                 if (i > q) {
                     A[k] = B[j++];
                     cont++;
@@ -38,10 +41,11 @@ public class MergeSort extends AlgOrd{
                     A[k] = B[j++];
                     cont++;
                 }
-                cont++;
+              
             }
             
             this.comparacoes = cont;
+            //System.out.println("Número de comparações Merge: " +cont);
         }
 
     @Override

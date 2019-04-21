@@ -8,6 +8,7 @@ public class SelectionSort extends AlgOrd {
 
     public void SelectionSort(int v[]) {
         int cont = 0;
+        cont++;
         for (int i = 0; i < v.length - 1; i++) {
             int minimo = i;
             cont++;
@@ -17,13 +18,13 @@ public class SelectionSort extends AlgOrd {
                     cont++;
                 }
             }
-            cont++;
             int aux = v[i];
             v[i] = v[minimo];
             v[minimo] = aux;
         }
 
         this.comparacoes = cont;
+        //System.out.println("Número de comparações Selection: " +cont);
     }
 
     @Override
