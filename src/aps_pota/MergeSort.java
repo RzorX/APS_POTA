@@ -1,9 +1,9 @@
 package aps_pota;
 
-public class MergeSort extends AlgOrd{
+public class MergeSort extends AlgOrd {
 
-    public MergeSort(String nome) {
-        super(nome);
+    public MergeSort(String nome, int vet[]) {
+        super(nome, vet);
     }
 
     private void MergeSort(int[] A, int p, int r) {
@@ -23,35 +23,35 @@ public class MergeSort extends AlgOrd{
             B[k] = A[k];
             cont++;
         }
-            int i = p;
-            int j = q+1;
+        int i = p;
+        int j = q + 1;
+        cont++;
+        for (int k = p; k <= r; k++) {
             cont++;
-            for (int k = p; k <= r; k++) {
+            if (i > q) {
+                A[k] = B[j++];
                 cont++;
-                if (i > q) {
-                    A[k] = B[j++];
-                    cont++;
-                } else if (j > r){
-                    A[k] = B[i++];
-                    cont++;
-                } else if (B[i] < B[j]){
-                    A[k] = B[i++];
-                    cont++;
-                } else {
-                    A[k] = B[j++];
-                    cont++;
-                }
-              
+            } else if (j > r) {
+                A[k] = B[i++];
+                cont++;
+            } else if (B[i] < B[j]) {
+                A[k] = B[i++];
+                cont++;
+            } else {
+                A[k] = B[j++];
+                cont++;
             }
-            
-            this.comparacoes = cont;
-            //System.out.println("Número de comparações Merge: " +cont);
+
         }
 
+        this.comparacoes = cont;
+        //System.out.println("Número de comparações Merge: " +cont);
+    }
+
     @Override
-    public void Orderna(int[] vet) {
-        this.MergeSort(vet, 0, vet.length-1);
-        this.tamanho = vet.length;
+    public void Orderna() {
+        this.MergeSort(vetor, 0, vetor.length - 1);
+        this.tamanho = vetor.length;
     }
-    
-    }
+
+}

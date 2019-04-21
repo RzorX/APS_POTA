@@ -1,6 +1,5 @@
 package aps_pota;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class APS_POTA {
@@ -17,24 +16,31 @@ public class APS_POTA {
         //vetores.add(new int[10000]);
              
         for(int i = 0; i<vetores.size(); i++){
-            
-            //Define o tamanho do vetor e gerar um valor aleatorio
-            int v[] = new int [vetores.get(i).length];
-            v = GenerateRandVet(v.length);
+            //Vetor que será utilizado para ordenação
+            int v[];
             
             //Criar instancias para comparação
+            
             //Meger Sort
-            MergeSort ms = new MergeSort("Merge Sort");
-            SelectionSort ss = new SelectionSort("Selection Sort");
+            MergeSort ms = null;
+            //Selection Sort
+            SelectionSort ss = null;
             
             for (int j = 0; j < 50; j++ ) {
-                //Executa cada script de comparação 50 vezes com o mesmo vetor
+                //Define o tamanho do vetor e gera um valor aleatorio
+                v = new int [vetores.get(i).length];
+                v = GenerateRandVet(v.length);
                 
+                //Executa cada script de comparação 50 vezes com o mesmo vetor
+                            
                 //Meger Sort
-                ms.Orderna(v);
+                ms = new MergeSort("Merge Sort", v);
+                ms.Orderna();
                 
                 //Selection Sort
-                ss.Orderna(v);
+                ss = new SelectionSort("Selection Sort", v);
+                ss.Orderna();
+
                 //Adicionar os demais...
             }            
             

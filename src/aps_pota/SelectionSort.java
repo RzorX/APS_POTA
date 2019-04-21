@@ -2,8 +2,8 @@ package aps_pota;
 
 public class SelectionSort extends AlgOrd {
 
-    public SelectionSort(String nome) {
-        super(nome);
+    public SelectionSort(String nome, int vet[]) {
+        super(nome, vet);
     }
 
     public void SelectionSort(int v[]) {
@@ -28,9 +28,9 @@ public class SelectionSort extends AlgOrd {
     }
 
     @Override
-    public void Orderna(int[] vet) {
-        this.SelectionSort(vet);
-        this.tamanho = vet.length;
+    public void Orderna() {
+        this.SelectionSort(vetor);
+        this.tamanho = vetor.length;
     }
 
 }

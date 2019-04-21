@@ -13,9 +13,17 @@ public abstract class AlgOrd {
     protected int comparacoes;
     private String nome;
     int tamanho;
-
-    public AlgOrd(String nome) {
+    protected int vetor[];
+    
+    public AlgOrd(String nome, int vet[]) {
         this.nome = nome;
+        
+        vetor = new int[vet.length];
+        
+        //Copia vetor para manter o original
+        for (int i = 0; i < vet.length; i++) {
+            vetor[i] = vet[i];
+        }
     }
         
     @Override
@@ -34,6 +42,6 @@ public abstract class AlgOrd {
     
     
     
-    public abstract void Orderna(int vet[]);
+    public abstract void Orderna();
     
 }
