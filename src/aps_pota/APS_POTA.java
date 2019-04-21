@@ -11,9 +11,9 @@ public class APS_POTA {
         vetores.add(new int[5]);
         vetores.add(new int[10]);
         vetores.add(new int[50]);
-        //vetores.add(new int[100]);
-        //vetores.add(new int[1000]);
-        //vetores.add(new int[10000]);
+        vetores.add(new int[100]);
+        vetores.add(new int[1000]);
+        vetores.add(new int[10000]);
              
         for(int i = 0; i<vetores.size(); i++){
             //Vetor que será utilizado para ordenação
@@ -22,10 +22,13 @@ public class APS_POTA {
             //Criar instancias para comparação
             
             //Meger Sort
-            MergeSort ms = null;
+            MergeSort ms = new MergeSort("Merge Sort");
             //Selection Sort
-            SelectionSort ss = null;
+            SelectionSort ss = new SelectionSort("Selection Sort");
+            //Insertion Sort
+            InsertionSort is = new InsertionSort("Insertion Sort");
             
+            //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
                 //Define o tamanho do vetor e gera um valor aleatorio
                 v = new int [vetores.get(i).length];
@@ -34,18 +37,24 @@ public class APS_POTA {
                 //Executa cada script de comparação 50 vezes com o mesmo vetor
                             
                 //Meger Sort
-                ms = new MergeSort("Merge Sort", v);
+                ms.setVetor(v);
                 ms.Orderna();
                 
                 //Selection Sort
-                ss = new SelectionSort("Selection Sort", v);
+                ss.setVetor(v);
                 ss.Orderna();
 
+                //Insertion Sort
+                is.setVetor(v);
+                is.Orderna();
+                
                 //Adicionar os demais...
             }            
             
+            //Adicionar print dos ordenadotes
             System.out.println(ms.toString());
             System.out.println(ss.toString());
+            System.out.println(is.toString());
         }
     }
 

@@ -15,15 +15,8 @@ public abstract class AlgOrd {
     int tamanho;
     protected int vetor[];
     
-    public AlgOrd(String nome, int vet[]) {
+    public AlgOrd(String nome) {
         this.nome = nome;
-        
-        vetor = new int[vet.length];
-        
-        //Copia vetor para manter o original
-        for (int i = 0; i < vet.length; i++) {
-            vetor[i] = vet[i];
-        }
     }
         
     @Override
@@ -40,7 +33,14 @@ public abstract class AlgOrd {
         return nome;
     }
     
-    
+    public void setVetor(int vet[]){        
+        vetor = new int[vet.length];
+        
+        //Copia vetor para manter o original
+        for (int i = 0; i < vet.length; i++) {
+            vetor[i] = vet[i];
+        }
+    }
     
     public abstract void Orderna();
     
