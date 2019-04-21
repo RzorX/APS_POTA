@@ -2,8 +2,8 @@ package aps_pota;
 
 public class SelectionSort extends AlgOrd {
 
-    public SelectionSort(String nome, int vet[]) {
-        super(nome, vet);
+    public SelectionSort(String nome) {
+        super(nome);
     }
 
     public void SelectionSort(int v[]) {

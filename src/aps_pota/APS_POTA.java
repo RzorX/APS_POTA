@@ -22,9 +22,9 @@ public class APS_POTA {
             //Criar instancias para comparação
             
             //Meger Sort
-            MergeSort ms = null;
+            MergeSort ms = new MergeSort("Merge Sort");
             //Selection Sort
-            SelectionSort ss = null;
+            SelectionSort ss = new SelectionSort("Selection Sort");
             
             for (int j = 0; j < 50; j++ ) {
                 //Define o tamanho do vetor e gera um valor aleatorio
@@ -34,11 +34,11 @@ public class APS_POTA {
                 //Executa cada script de comparação 50 vezes com o mesmo vetor
                             
                 //Meger Sort
-                ms = new MergeSort("Merge Sort", v);
+                ms.setVetor(v);
                 ms.Orderna();
                 
                 //Selection Sort
-                ss = new SelectionSort("Selection Sort", v);
+                ss.setVetor(v);
                 ss.Orderna();
 
                 //Adicionar os demais...

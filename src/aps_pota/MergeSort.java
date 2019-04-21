@@ -2,8 +2,8 @@ package aps_pota;
 
 public class MergeSort extends AlgOrd {
 
-    public MergeSort(String nome, int vet[]) {
-        super(nome, vet);
+    public MergeSort(String nome) {
+        super(nome);
     }
 
     private void MergeSort(int[] A, int p, int r) {
