@@ -10,13 +10,14 @@ package aps_pota;
  * @author isantos
  */
 public abstract class AlgOrd {
-    protected int comparacoes;
+    protected long comparacoes;
     private String nome;
     int tamanho;
     protected int vetor[];
     
     public AlgOrd(String nome) {
         this.nome = nome;
+        this.comparacoes = 0;
     }
         
     @Override
@@ -25,7 +26,7 @@ public abstract class AlgOrd {
                 +"Total de compações com vetor tamanho " + tamanho + " :" + comparacoes;
     }
     
-    public int TotalDeComparacoes(){
+    public long TotalDeComparacoes(){
         return comparacoes;
     }
 

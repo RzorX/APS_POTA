@@ -17,10 +17,13 @@ public class SelectionSort extends AlgOrd {
                     minimo = j;
                     this.comparacoes++;
                 }
+                this.comparacoes++;
             }
             int aux = v[i];
             v[i] = v[minimo];
             v[minimo] = aux;
+            
+            this.comparacoes++;
         }
         //System.out.println("Número de comparações Selection: " +cont);
     }

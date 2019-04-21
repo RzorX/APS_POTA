@@ -21,14 +21,17 @@ public class InsertionSort extends AlgOrd {
         for (int i = 1; i < vetor.length; i++) {
             
             int j = i;
-
+            
             this.comparacoes++;
             while (j > 0 && vetor[j - 1] > vetor[j]) {
                 int aux = vetor[j];
                 vetor[j] = vetor[j - 1];
                 vetor[j - 1] = aux;
                 j = j - 1;
+                this.comparacoes++;
             }
+            
+            this.comparacoes++;
         }
 
     }

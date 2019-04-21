@@ -27,7 +27,7 @@ public class MergeSort extends AlgOrd {
         int j = q + 1;
         this.comparacoes++;
         for (int k = p; k <= r; k++) {
-            this.comparacoes++;
+
             if (i > q) {
                 A[k] = B[j++];
                 this.comparacoes++;
@@ -41,7 +41,8 @@ public class MergeSort extends AlgOrd {
                 A[k] = B[j++];
                 this.comparacoes++;
             }
-
+            
+           this.comparacoes++;
         }
         //System.out.println("Número de comparações Merge: " +cont);
     }
