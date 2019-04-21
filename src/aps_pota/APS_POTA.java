@@ -62,7 +62,8 @@ public class APS_POTA {
             System.out.println("SEQUENCIA ORIGINAL");
             for (int i = 0; i < vetor.length; i++) {
                 System.out.print(vetor[i]+ ", ");
-           }
+            }
+            /*
             System.out.println("\n");
             MergeSort ms = new MergeSort("Merge Sort");
             SelectionSort ss = new SelectionSort("Selection Sort");
