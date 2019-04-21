@@ -11,9 +11,9 @@ public class APS_POTA {
         vetores.add(new int[5]);
         vetores.add(new int[10]);
         vetores.add(new int[50]);
-        //vetores.add(new int[100]);
-        //vetores.add(new int[1000]);
-        //vetores.add(new int[10000]);
+        vetores.add(new int[100]);
+        vetores.add(new int[1000]);
+        vetores.add(new int[10000]);
              
         for(int i = 0; i<vetores.size(); i++){
             //Vetor que será utilizado para ordenação
@@ -25,7 +25,10 @@ public class APS_POTA {
             MergeSort ms = new MergeSort("Merge Sort");
             //Selection Sort
             SelectionSort ss = new SelectionSort("Selection Sort");
+            //Insertion Sort
+            InsertionSort is = new InsertionSort("Insertion Sort");
             
+            //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
                 //Define o tamanho do vetor e gera um valor aleatorio
                 v = new int [vetores.get(i).length];
@@ -41,11 +44,17 @@ public class APS_POTA {
                 ss.setVetor(v);
                 ss.Orderna();
 
+                //Insertion Sort
+                is.setVetor(v);
+                is.Orderna();
+                
                 //Adicionar os demais...
             }            
             
+            //Adicionar print dos ordenadotes
             System.out.println(ms.toString());
             System.out.println(ss.toString());
+            System.out.println(is.toString());
         }
     }
 
