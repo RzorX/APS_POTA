@@ -27,6 +27,8 @@ public class APS_POTA {
             SelectionSort ss = new SelectionSort("Selection Sort");
             //Insertion Sort
             InsertionSort is = new InsertionSort("Insertion Sort");
+            //Quick Sort
+            QuickSort qs = new QuickSort("Quick Sort");
             
             //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
@@ -48,6 +50,10 @@ public class APS_POTA {
                 is.setVetor(v);
                 is.Orderna();
                 
+                //Quick Sort
+                qs.setVetor(v);
+                qs.Orderna();
+                
                 //Adicionar os demais...
             }            
             
@@ -55,6 +61,7 @@ public class APS_POTA {
             System.out.println(ms.toString());
             System.out.println(ss.toString());
             System.out.println(is.toString());
+            System.out.println(qs.toString());
         }
     }
 
