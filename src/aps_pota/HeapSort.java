@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aps_pota;
 
-/**
- *
- * @author lab651
- */
 public class HeapSort extends AlgOrd {
 
     public HeapSort(String nome) {
