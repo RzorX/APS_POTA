@@ -6,7 +6,7 @@ public class HeapSort extends AlgOrd {
         super(nome);
     }
 
-    public void heapsort(int[]a, int tamanho ){
+    public void heapsort(int[]a, int tamanho){
             CriarHeap(a, a.length-1);
             int fim = a.length-1;
             while (fim>0) {            
@@ -56,7 +56,7 @@ public class HeapSort extends AlgOrd {
     @Override
     public void Orderna() {
         heapsort(vetor, tamanho);
-        this.tamanho = vetor.length;
+        this.tamanho = vetor.length -1;
         
     }
     
