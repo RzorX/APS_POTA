@@ -29,8 +29,10 @@ public class APS_POTA {
             InsertionSort is = new InsertionSort("Insertion Sort");
             //Quick Sort
             QuickSort qs = new QuickSort("Quick Sort");
-            
+            //Heap Sort
             HeapSort hs = new HeapSort("Heap Sort");
+            //Bubble Sort
+            BubbleSort bs = new BubbleSort("Bubble Sort");
             
             //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
@@ -59,6 +61,10 @@ public class APS_POTA {
                 //Heap Sort
                 hs.setVetor(v);
                 hs.Orderna();
+                
+                //BubbleSort
+                bs.setVetor(v);
+                bs.Orderna();
                 //Adicionar os demais...
             }            
             
@@ -68,6 +74,7 @@ public class APS_POTA {
             System.out.println(is.toString());
             System.out.println(qs.toString());
             System.out.println(hs.toString());
+            System.out.println(bs.toString());
         }
     }
 
