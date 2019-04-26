@@ -37,8 +37,7 @@ public class APP_Main {
             
             //Heap Sort
             HeapSort hs = new HeapSort("Heap Sort");
-            //Bubble Sort
-            BubbleSort bs = new BubbleSort("Bubble Sort");
+
 
             
             //Faz 50 ordenações com vetores de tamanho i
