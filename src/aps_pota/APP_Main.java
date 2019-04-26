@@ -2,7 +2,7 @@ package aps_pota;
 
 import java.util.ArrayList;
 
-public class APS_POTA {
+public class APP_Main {
 
     public static void main(String[] args) {
 
@@ -21,6 +21,8 @@ public class APS_POTA {
             
             //Criar instancias para comparação
             
+            //Bubble Sort
+            BubbleSort bs = new BubbleSort("Bubble Sort");
             //Meger Sort
             MergeSort ms = new MergeSort("Merge Sort");
             //Selection Sort
@@ -29,6 +31,9 @@ public class APS_POTA {
             InsertionSort is = new InsertionSort("Insertion Sort");
             //Quick Sort
             QuickSort qs = new QuickSort("Quick Sort");
+            //Count Sort
+            CountSort cs = new CountSort("Count Sort");
+            
             
             //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
@@ -38,6 +43,10 @@ public class APS_POTA {
                 
                 //Executa cada script de comparação 50 vezes com o mesmo vetor
                             
+                //Bubble Sort
+                bs.setVetor(v);
+                bs.Orderna();
+                
                 //Meger Sort
                 ms.setVetor(v);
                 ms.Orderna();
@@ -54,14 +63,21 @@ public class APS_POTA {
                 qs.setVetor(v);
                 qs.Orderna();
                 
+                //CountSort
+                cs.setVetor(v);
+                cs.Orderna();
                 //Adicionar os demais...
             }            
             
             //Adicionar print dos ordenadotes
+            System.out.println("=======================================================");
+            System.out.println(bs.toString());
             System.out.println(ms.toString());
             System.out.println(ss.toString());
             System.out.println(is.toString());
             System.out.println(qs.toString());
+            System.out.println(cs.toString());
+            System.out.println("=======================================================");
         }
     }
 
