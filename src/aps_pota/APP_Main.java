@@ -23,7 +23,7 @@ public class APP_Main {
             
             //Bubble Sort
             BubbleSort bs = new BubbleSort("Bubble Sort");
-            //Meger Sort
+            //Merge Sort
             MergeSort ms = new MergeSort("Merge Sort");
             //Selection Sort
             SelectionSort ss = new SelectionSort("Selection Sort");
@@ -31,9 +31,15 @@ public class APP_Main {
             InsertionSort is = new InsertionSort("Insertion Sort");
             //Quick Sort
             QuickSort qs = new QuickSort("Quick Sort");
+            
             //Count Sort
             CountSort cs = new CountSort("Count Sort");
             
+            //Heap Sort
+            HeapSort hs = new HeapSort("Heap Sort");
+            //Bubble Sort
+            BubbleSort bs = new BubbleSort("Bubble Sort");
+
             
             //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
@@ -66,6 +72,15 @@ public class APP_Main {
                 //CountSort
                 cs.setVetor(v);
                 cs.Orderna();
+                
+                //Heap Sort
+                hs.setVetor(v);
+                hs.Orderna();
+                
+                //BubbleSort
+                bs.setVetor(v);
+                bs.Orderna();
+
                 //Adicionar os demais...
             }            
             
@@ -76,8 +91,11 @@ public class APP_Main {
             System.out.println(ss.toString());
             System.out.println(is.toString());
             System.out.println(qs.toString());
+            System.out.println(hs.toString());
             System.out.println(cs.toString());
             System.out.println("=======================================================");
+
+
         }
     }
 
