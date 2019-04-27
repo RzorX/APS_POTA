@@ -43,6 +43,12 @@ public abstract class AlgOrd {
         }
     }
     
+    public void ImprimeVetor(){        
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i] + ", ");
+        }
+    }
+    
     public abstract void Orderna();
     
 }

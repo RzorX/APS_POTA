@@ -41,6 +41,9 @@ public class APP_Main {
             //Radix Sort
             RadixSort rs = new RadixSort("Radix Sort");
 
+            //Bucket Sort
+            BucketSort bks = new BucketSort("Bucket Sort");
+
             
             //Faz 50 ordenações com vetores de tamanho i
             for (int j = 0; j < 50; j++ ) {
@@ -49,7 +52,7 @@ public class APP_Main {
                 v = GenerateRandVet(v.length);
                 
                 //Executa cada script de comparação 50 vezes com o mesmo vetor
-                            
+          
                 //Bubble Sort
                 bs.setVetor(v);
                 bs.Orderna();
@@ -86,6 +89,9 @@ public class APP_Main {
                 rs.setVetor(v);
                 rs.Orderna();
 
+                //Bucket Sort
+                bks.setVetor(v);
+                bks.Orderna();
                 //Adicionar os demais...
             }            
             
@@ -99,6 +105,7 @@ public class APP_Main {
             System.out.println(hs.toString());
             System.out.println(cs.toString());
             System.out.println(rs.toString());
+            System.out.println(bks.toString());
             System.out.println("=======================================================");
 
 
