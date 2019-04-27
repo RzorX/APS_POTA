@@ -30,14 +30,11 @@ public class APP_Main {
             //Insertion Sort
             InsertionSort is = new InsertionSort("Insertion Sort");
             //Quick Sort
-            QuickSort qs = new QuickSort("Quick Sort");
-            
+            QuickSort qs = new QuickSort("Quick Sort");            
             //Count Sort
-            CountSort cs = new CountSort("Count Sort");
-            
+            CountSort cs = new CountSort("Count Sort");            
             //Heap Sort
-            HeapSort hs = new HeapSort("Heap Sort");
-            
+            HeapSort hs = new HeapSort("Heap Sort");          
             //Radix Sort
             RadixSort rs = new RadixSort("Radix Sort");
 

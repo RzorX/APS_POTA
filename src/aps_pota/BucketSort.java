@@ -9,6 +9,10 @@ public class BucketSort extends AlgOrd {
     public BucketSort(String nome) {
         super(nome);
     }
+    
+    public void bucketSort(int[] v){
+        
+    }
 
     public void bucketSort(){
         
