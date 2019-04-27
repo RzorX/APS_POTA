@@ -19,16 +19,16 @@ public class CountSort extends AlgOrd{
 		return m;
 	}
 	public void countSort(int vetor[]){
-		int maior = indiceMaiorValor(vetor);
-		int[] aux = new int[vetor[maior]+1];
+		int maior = indiceMaiorValor(vetor);//retorna o indice de maior valor
+		int[] aux = new int[vetor[maior]+1];//cria um vetor auxiliar com o tamanho do valor do maior elemento+1
 		int[] resposta = new int[vetor.length];
 		this.comparacoes++;
-		for (int i=0; i < vetor.length; i++){
+		for (int i=0; i < vetor.length; i++){//percorre vetor e conta o numero de ocorrencias correspondente em aux . "quantos X tem no vetor?" e incrementa aux[X]. 
 			aux[vetor[i]]+=1;
 			this.comparacoes++;
 		}
 		this.comparacoes++;
-		for(int i = 1; i<aux.length;i++){
+		for(int i = 1; i<aux.length;i++){//
 			aux[i]+= aux[i-1];
 			this.comparacoes++;
 		}
