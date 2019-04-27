@@ -114,26 +114,7 @@ public class APP_Main {
             for (int i = 0; i < vetor.length; i++) {
                 int random = (int) (Math.random() * 101);
                 vetor[i] = random;
-            }/*
-            System.out.println("SEQUENCIA ORIGINAL");
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.print(vetor[i]+ ", ");
             }
-            /*
-            System.out.println("\n");
-            MergeSort ms = new MergeSort("Merge Sort");
-            SelectionSort ss = new SelectionSort("Selection Sort");
-            ms.Orderna(vetor);
-            ss.Orderna(vetor);
-            
-            System.out.println("SEQUENCIA APÓS ORDERNAÇÂO");
-            for (int i = 0; i < vetor.length; i++) {
-                System.out.print(vetor[i]+ ", ");
-           }
-            System.out.println("\n");
-            //System.out.println(ms.toString());
-            //System.out.println(ss.toString());
-            */
         }
 
         return vetor; 
