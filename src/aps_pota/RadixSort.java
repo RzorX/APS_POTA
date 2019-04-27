@@ -1,4 +1,5 @@
 package aps_pota;
+
 public class RadixSort extends AlgOrd{
 	public RadixSort(String nome) {
 		super(nome);
@@ -49,7 +50,6 @@ public class RadixSort extends AlgOrd{
 	}
 	
 	public void radixSort(int[] vet) {
-		int[]temp;
 		int dig = NumDigitos(vet);
 		int decimal=1;
 		this.comparacoes++;
@@ -64,6 +64,5 @@ public class RadixSort extends AlgOrd{
 	public void Orderna() {
     radixSort(vetor);
     this.tamanho = vetor.length;
-    }
-		
+	}
 }

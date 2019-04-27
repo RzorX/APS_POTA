@@ -6,59 +6,56 @@ public class HeapSort extends AlgOrd {
         super(nome);
     }
 
-    public void heapsort(int[] a, int tamanho){
-            CriarHeap(a, tamanho);
-            int fim = tamanho - 1;
-            while (fim>0) {            
-                troca(a, a[fim],a[0]);
-                fim = fim -1;
-                ArrumaHeap(a, 0, fim);
+    void ArrumarHeap(int[] A, int pai) {
+        int esq = 2 * pai + 1;
+        int dir = (2 * pai) + 2;
+        int maior = pai;
+        this.comparacoes++;
+        if (esq <= tamanho && A[esq] > A[maior]) {
+            maior = esq;
+            this.comparacoes++;
         }
-    }
-    
-    void CriarHeap (int[]a, int tamanho){
-        int inicio = Math.floorDiv((tamanho -2),2);
-        while (inicio>=0) {            
-            ArrumaHeap(a, inicio, tamanho-1);
-            inicio = inicio -1;
+        this.comparacoes++;
+        if (dir <= tamanho && A[dir] > A[maior]) {
+            maior = dir;
+            this.comparacoes++;
+        }
+        this.comparacoes++;
+        if (maior != pai) {
+            int aux = A[pai];
+            A[pai] = A[maior];
+            A[maior] = aux;
+            ArrumarHeap(A, maior);
+            this.comparacoes++;
         }
     }
 
-    private void troca(int[] a, int i, int j) {
-       int temp = a[j];
-       a[j] = a[i];
-       a[i] = temp;
-    }
-
-    private void ArrumaHeap(int[] a, int i, int fim) {
-        int raiz = i;
-        int filho;
-        int trocar;
-        while ((raiz*2+1)<=fim) {            
-            filho = raiz*2+1;
-            trocar = raiz;
-            if (a[trocar]<a[filho]) {
-                trocar = filho;
-            }
-            if (filho+1<=fim && a[trocar]<a[filho+1]) {
-                trocar = filho+1;
-            }
-            if (trocar == raiz) {
-                break;
-            }else{
-                troca(a, raiz, trocar);
-                raiz = trocar;
-            }
-            
+    void CriarHeap(int[] A) {
+        tamanho = A.length - 1;
+        this.comparacoes++;
+        for (int pai = tamanho / 2; pai >= 0; pai--) {
+            ArrumarHeap(A, pai);
+            this.comparacoes++;
         }
     }
-    
+
+    void heapSort(int[] A, int tamanho) {
+        CriarHeap(A);
+        this.comparacoes++;
+        for (int i = tamanho; i > 0; i--) {
+            int aux = A[i];
+            A[i] = A[0];
+            A[0] = aux;
+            tamanho--;
+            ArrumarHeap(A, 0);
+            this.comparacoes++;
+        }
+    }
+
     @Override
     public void Orderna() {
+        heapSort(vetor, vetor.length - 1);
         this.tamanho = vetor.length;
-        heapsort(vetor, tamanho);
-        
-        
     }
-    
+
 }
