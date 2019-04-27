@@ -36,7 +36,7 @@ public class APP_Main {
             CountSort cs = new CountSort("Count Sort");
             
             //Heap Sort
-            //HeapSort hs = new HeapSort("Heap Sort");
+            HeapSort hs = new HeapSort("Heap Sort");
             
             //Radix Sort
             RadixSort rs = new RadixSort("Radix Sort");
@@ -75,8 +75,8 @@ public class APP_Main {
                 cs.Orderna();
                 
                 //Heap Sort
-                //hs.setVetor(v);
-                //hs.Orderna();
+                hs.setVetor(v);
+                hs.Orderna();
                 
                 //BubbleSort
                 bs.setVetor(v);
@@ -96,7 +96,7 @@ public class APP_Main {
             System.out.println(ss.toString());
             System.out.println(is.toString());
             System.out.println(qs.toString());
-            //System.out.println(hs.toString());
+            System.out.println(hs.toString());
             System.out.println(cs.toString());
             System.out.println(rs.toString());
             System.out.println("=======================================================");
