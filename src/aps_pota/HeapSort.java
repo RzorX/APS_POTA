@@ -6,7 +6,7 @@ public class HeapSort extends AlgOrd {
         super(nome);
     }
 
-    public void heapsort(int[]a, int tamanho){
+    public void heapsort(int[] a, int tamanho){
             CriarHeap(a, tamanho);
             int fim = tamanho - 1;
             while (fim>0) {            
@@ -24,7 +24,7 @@ public class HeapSort extends AlgOrd {
         }
     }
 
-    private void troca(int a[], int i, int j) {
+    private void troca(int[] a, int i, int j) {
        int temp = a[j];
        a[j] = a[i];
        a[i] = temp;

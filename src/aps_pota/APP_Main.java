@@ -37,7 +37,9 @@ public class APP_Main {
             
             //Heap Sort
             //HeapSort hs = new HeapSort("Heap Sort");
-
+            
+            //Radix Sort
+            RadixSort rs = new RadixSort("Radix Sort");
 
             
             //Faz 50 ordenações com vetores de tamanho i
@@ -52,7 +54,7 @@ public class APP_Main {
                 bs.setVetor(v);
                 bs.Orderna();
                 
-                //Meger Sort
+                //Merge Sort
                 ms.setVetor(v);
                 ms.Orderna();
                 
@@ -79,6 +81,10 @@ public class APP_Main {
                 //BubbleSort
                 bs.setVetor(v);
                 bs.Orderna();
+                
+                //Radix
+                rs.setVetor(v);
+                rs.Orderna();
 
                 //Adicionar os demais...
             }            
@@ -92,6 +98,7 @@ public class APP_Main {
             System.out.println(qs.toString());
             //System.out.println(hs.toString());
             System.out.println(cs.toString());
+            System.out.println(rs.toString());
             System.out.println("=======================================================");
 
 
